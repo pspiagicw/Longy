@@ -1,5 +1,6 @@
 * Longy
 A simple app showing the steps involved in Longest Common Substring problem!
+APK file is included with the Zip File.See the Installation Section for more information.
 
 The Github Repository is available [[https://github.com/pspiagicw/Longy][here]].You can download the apk from the /Releases/ Section for convinience or
 compile it yourself using required tools.
@@ -20,9 +21,9 @@ Tested using Flutter 2.5 and JDK11.
 This app can run on any platform .Thanks to Flutter!
 But we are only targetting Android. For compiling on multiple platform see flutter documentation.
 
-** Building and Installing
+** Building 
 
-You need a working installation of Flutter(2.5) and JDK11.
+You need a working installation of Flutter(2.5) and JDK11(For Android).
 See [[https://flutter.dev/][official webiste]] for more information.
 
 Clone the git repository(https://github.com/pspiagicw/Longy), and run
@@ -31,6 +32,10 @@ Clone the git repository(https://github.com/pspiagicw/Longy), and run
 For running the app in debug mode ,
 connect your Android Device using ADB Or start a emulator , then ~flutter run~
 would start the app in debug mode.
+
+** Installing
+Transfer the APK file to your android device . Opening it with a file-manager would install the app.
+The app name is 'Longy' and it has the default /Flutter/ Logo.
 
 ** Usage
 Just install the apk , by downloading and tapping on the apk file.

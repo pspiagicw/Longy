@@ -37,7 +37,7 @@ class AboutScreen extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text:' by F22'
+                  text:' by FF2'
                 )
               ]
             ),
