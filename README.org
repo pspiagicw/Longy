@@ -34,7 +34,7 @@ connect your Android Device using ADB Or start a emulator , then ~flutter run~
 would start the app in debug mode.
 
 ** Installing
-Transfer the APK file to your android device . Opening it with a file-manager would install the app.
+Transfer the APK(File is named 'longy.apk') file to your android device . Opening it with a file-manager would install the app.
 The app name is 'Longy' and it has the default /Flutter/ Logo.
 
 ** Usage
