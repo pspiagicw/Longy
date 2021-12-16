@@ -1,9 +1,16 @@
 * Longy
-
 A simple app showing the steps involved in Longest Common Substring problem!
+
+The Github Repository is available [[https://github.com/pspiagicw/Longy][here]].You can download the apk from the /Releases/ Section for convinience or
+compile it yourself using required tools.
 
 ** Motivation
 This app has been written as a assignment in the course 'Design and Analysis of Algorithms'.
+
+** Progress
+This app currently utilizes the standard LCS algorithm to list the steps involved.
+The second part of this project is to implement a diffing algorithm using the LCS logic.
+Which is currently under construction!
 
 ** Library and Language
 This has been written in Flutter.Thus written in Dart.

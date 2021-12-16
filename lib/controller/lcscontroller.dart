@@ -49,13 +49,13 @@ List<StepObject> compute_lcs_steps(text1, text2) {
         steps.add(StepObject(
             header: "Character Matched!",
             description:
-            "The character '${text1[i - 1]}' matched at position ${i-1} (String1) and ${j-1} (String2)"));
+            "The character '${text1[i - 1]}' matched at position ${i-1} (String1) and ${j-1} (String2). Thus value of matrix[$i][$j] was set to ${lcs[i][j]}"));
       } else {
         lcs[i][j] = max(lcs[i - 1][j], lcs[i][j - 1]);
         steps.add(StepObject(
             header: "Character not-matched",
             description:
-                "The character '${text1[i - 1]}'  at position ${i - 1} (String1) did not match character ${text2[j - 1]} at position ${j - 1} (String2)"));
+            "The character '${text1[i - 1]}'  at position ${i - 1} (String1) did not match character ${text2[j - 1]} at position ${j - 1} (String2). Thus we are finding LCS between their substrings"));
       }
     }
   }
