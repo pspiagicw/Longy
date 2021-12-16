@@ -1,0 +1,41 @@
+* Longy
+
+A simple app showing the steps involved in Longest Common Substring problem!
+
+** Motivation
+This app has been written as a assignment in the course 'Design and Analysis of Algorithms'.
+
+** Library and Language
+This has been written in Flutter.Thus written in Dart.
+Tested using Flutter 2.5 and JDK11.
+
+** Platforms
+This app can run on any platform .Thanks to Flutter!
+But we are only targetting Android. For compiling on multiple platform see flutter documentation.
+
+** Building and Installing
+
+You need a working installation of Flutter(2.5) and JDK11.
+See [[https://flutter.dev/][official webiste]] for more information.
+
+Clone the git repository(https://github.com/pspiagicw/Longy), and run
+~flutter build apk~ to build a apk.
+
+For running the app in debug mode ,
+connect your Android Device using ADB Or start a emulator , then ~flutter run~
+would start the app in debug mode.
+
+** Usage
+Just install the apk , by downloading and tapping on the apk file.
+Open the app and start using!.
+
+** Screenshots
+
+#+caption: HomeScreen
+[[./screenshots/homescreen.jpg]]
+
+#+caption: Step Description
+[[./screenshots/step_description.jpg]]
+
+#+caption: Output Description
+[[./screenshots/output.jpg]]
