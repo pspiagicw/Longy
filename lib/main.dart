@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:longy/screens/home_screen.dart';
+import 'package:longy/screens/main_screen.dart';
+import 'package:longy/screens/about_screen.dart';
 
 
 void main() {
@@ -13,10 +14,10 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
       title: 'Longy',
-      home: HomeScreen(),
+      home: MainScreen(),
     );
   }
   
+
 }
