@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:longy/controller/diffcontroller.dart';
+import 'package:longy/widgets/diff_widget.dart';
 
 class DiffScreen extends StatefulWidget {
   DiffScreen({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class _DiffScreenState extends State<DiffScreen> {
   var firstStringController = TextEditingController();
   var secondStringController = TextEditingController();
   var diffStringController = TextEditingController();
+  List<String> diff = <String>[];
 
   @override
   void dispose() {
@@ -24,70 +26,54 @@ class _DiffScreenState extends State<DiffScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'DIFF',
-          style: TextStyle(
-            fontFamily : 'Coluna',
-          )
-        ),
+        title: Text('DIFF',
+            style: TextStyle(
+              fontFamily: 'Coluna',
+            )),
       ),
       floatingActionButton: FloatingActionButton.extended(
         label: Text(
           'DIFF IT',
-          style: TextStyle(
-            fontFamily: 'Coluna'
-          ),
+          style: TextStyle(fontFamily: 'Coluna'),
         ),
         onPressed: () {
-          diffStringController.text = calculateDiff(
-              firstStringController.text, secondStringController.text);
+          setState(() {
+            diff = calculateDiff(
+                firstStringController.text, secondStringController.text);
+          });
         },
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          child: ListView(
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Source A',
-                  border: OutlineInputBorder(),
-                ),
-                controller: firstStringController,
-                maxLines: 3,
+      body: Container(
+        padding: EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Source A',
+                border: OutlineInputBorder(),
               ),
-              SizedBox(height: 10),
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Source B',
-                  border: OutlineInputBorder(),
-                ),
-                controller: secondStringController,
-                maxLines: 3,
+              controller: firstStringController,
+              maxLines: 2,
+            ),
+            SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Source B',
+                border: OutlineInputBorder(),
               ),
-              SizedBox(height: 20),
-              TextField(
-                controller: diffStringController,
-                maxLines: 10,
-                readOnly: true,
-                decoration: InputDecoration(
-                  hintText: 'Diff',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Under Contstruction for Group Project 3!',
-                style: TextStyle(
-                  fontFamily: 'Coluna',
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  
-                )
-              ),
-            ],
-          ),
+              controller: secondStringController,
+              maxLines: 2,
+            ),
+            SizedBox(height: 10),
+            Expanded(
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: diff.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return DiffWidget(text: diff[index]);
+                  }),
+            ),
+          ],
         ),
       ),
     );
